@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Allergens | MedAlert</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f5f8fa;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .search {
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .allergen-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="medalert.html" class="back-btn">← Back to MedAlert</a>
+  <h1>Common Allergens</h1>
+  
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Search allergens...">
+  </div>
+
+  <div id="allergensList">
+    <!-- Allergen cards will appear here -->
+  </div>
+
+  <script>
+    const allergens = [
+      { name: "Peanuts", description: "Can cause severe reactions like anaphylaxis." },
+      { name: "Milk", description: "Common in children. Symptoms include hives, vomiting." },
+      { name: "Eggs", description: "Often triggers in children, can cause respiratory issues." },
+      { name: "Shellfish", description: "Includes shrimp, crab. Severe allergic potential." },
+      { name: "Pollen", description: "Causes hay fever, sneezing, watery eyes." },
+      { name: "Dust Mites", description: "Indoor allergen that triggers asthma." },
+      { name: "Latex", description: "Used in gloves and balloons; can cause rashes or anaphylaxis." },
+    ];
+
+    const listContainer = document.getElementById("allergensList");
+    const searchInput = document.getElementById("searchInput");
+
+    function displayAllergens(filter = "") {
+      listContainer.innerHTML = "";
+      allergens
+        .filter(a => a.name.toLowerCase().includes(filter.toLowerCase()))
+        .forEach(a => {
+          const card = document.createElement("div");
+          card.className = "allergen-card";
+          card.innerHTML = `<strong>${a.name}</strong><p>${a.description}</p>`;
+          listContainer.appendChild(card);
+        });
+    }
+
+    searchInput.addEventListener("input", () => {
+      displayAllergens(searchInput.value);
+    });
+
+    displayAllergens();
+  </script>
+</body>
+</html>

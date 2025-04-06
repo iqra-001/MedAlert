@@ -1,0 +1,28 @@
+{
+  "allergies": [
+    {
+      "id": "2",
+      "name": "Brian Otieno",
+      "allergies": "Penicillin",
+      "medications": "Amoxicillin, Cephalexin"
+    },
+    {
+      "id": "3",
+      "name": "Clara Wanjiru",
+      "allergies": "Lactose, Aspirin",
+      "medications": "Ibuprofen, Naproxen"
+    },
+    {
+      "id": "7373",
+      "name": "shindeys abdi",
+      "allergies": "saw dust, pollen",
+      "medications": "paracetamol"
+    },
+    {
+      "id": "7453",
+      "name": "shadrack muia",
+      "allergies": "potassium",
+      "medications": "ibrufen "
+    }
+  ]
+}
