@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./l.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="./l.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div class="form-container reset-form">
-        <h2>Reset Password</h2>
-        <form>
-          <label for="reset-email">Email:</label>
-          <input type="email" id="reset-email" placeholder="Enter your email">
-          
-          <button type="submit" class="bg-primary">Reset Password</button>
+  <div class="form-container reset-form">
+    <h2>Reset Password</h2>
+    <form id="resetForm">
+      <label for="reset-email">Email:</label>
+      <input type="email" id="reset-email" placeholder="Enter your email" required>
+      
+      <button type="submit" class="btn-success">Reset Password</button>
+    </form>
+  </div>
 
+  <!-- JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-
-
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>       
+  <!-- Custom JS for alert -->
+  <script>
+    document.getElementById('resetForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from actually submitting
+      const email = document.getElementById('reset-email').value;
+      if (email) {
+        alert('A password reset link has been sent to ' + email);
+        // Optionally clear the input field
+        this.reset();
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });
+  </script>
 </body>
 </html>
