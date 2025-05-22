@@ -1,30 +1,25 @@
 {
-  "allergies": [
+  "allergies": 
     {
-      "id": "5513",
-      "name": "ira hussein ",
-      "allergies": "dust ",
-      "medications": "paracetamol"
+      "name": "abdiaziz",
+      "allergies": "meat",
+      "medications": "ibrufen",
+      "id": "000c"
     },
+  
+  
+"allergies3": 
     {
-      "id": "fa4f",
-      "name": "abdo ",
-      "allergies": "ey",
-      "medications": "yy",
-      "userId": 1
+      "name": "abdiaziz",
+      "allergies": "meat",
+      "medications": "ibrufen",
+      "id": "000c"
     },
+"allergies2": 
     {
-      "id": "bcd5",
-      "name": "khadija ",
-      "allergies": "ffff",
-      "medications": "ggg"
-    },
-    {
-      "id": "2bf4",
-      "name": "ffff",
-      "allergies": "ffff",
-      "medications": "fff",
-      "userId": 1
+      "name": "abdiaziz",
+      "allergies": "meat",
+      "medications": "ibrufen",
+      "id": "000c"
     }
-  ]
 }

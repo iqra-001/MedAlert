@@ -1,6 +1,6 @@
 // 
 
-const apiUrl = "http://localhost:3000/allergies";
+const apiUrl = "http://localhost:3000/";
 
 // 1️⃣ Fetch and Display Allergy Profiles
 function fetchAllergies() {
